@@ -1,24 +1,32 @@
-# vue-todolist
+# Vue Todo List App
 
-## Project setup
+A Todo App that you can list your activities and mark them as Complete or Incomplete. 
+It remembers To-do's even after your PC shuts down.
+
+## Features
+- Self Explanatory User Interface (UI).
+- Mark To-do's Complete or Incomplete.
+- Remembers even after browser gets accidentally closed or restarted.
+- Even remember after your PC shuts down.
+
+## Project Details
+Created using <strong>VueJS 3</strong> and <strong>TailwindCSS</strong>.
+
+## Setting up the Project
+
+#### Clone the Repository
+```
+git clone git@github.com:VidalGuilherme/vue-todolist.git
+```
+
+#### Install the NPM Packages
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### Run
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### Open in Browser: [http://localhost:8080](http://localhost:8080)
