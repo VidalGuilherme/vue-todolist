@@ -58,10 +58,14 @@
 </template>
 
 <script setup>
+import { LocalTodosService } from '@/services/LocalTodosService';
 import { ref } from 'vue';
 
+const localService = new LocalTodosService()
+
+let storedTodos = localService.getTodos()
 const newTodo = ref("")
-const todos = ref([])
+const todos = ref(storedTodos)
 
 function addTodo(){
     if(newTodo.value !== ""){
@@ -77,10 +81,12 @@ function addTodo(){
 function removeAll(){
     if(todos.value.length === 0) return  
     todos.value.splice(0, todos.value.length)
+    localService.updateTodos(todos.value);
 }
 
 function completeTodo(todo){
     todo.completed = !todo.completed
+    localService.updateTodos(todos.value);
 }
 
 </script>
